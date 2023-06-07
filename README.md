@@ -69,7 +69,7 @@ containerd 설치(참조: https://docs.docker.com/engine/install/ubuntu/ )
 
 16.
 
-    sudo nano /etc/fstab
+    sudo vi /etc/fstab
 
 kubeinit에서 "/proc/sys/net/bridge/bridge-nf-call-iptables does not exist" 오류를 방지합니다( https://github.com/kubernetes/kubeadm/issues/1062 참조 ). 
 
@@ -79,7 +79,9 @@ kubeinit에서 "/proc/sys/net/bridge/bridge-nf-call-iptables does not exist" 오
 
     sudo modprobe br_netfilter
 
-sudo nano /proc/sys/net/ipv4/ip_forward ip_forward 파일의 항목을 편집하고 1로 변경합니다. (또는 사용 sysctl -w net.ipv4.ip_forward=1- @dpjanes 덕분에 주석 참조)
+    sysctl -w net.ipv4.ip_forward=1
+    
+sudo nano /proc/sys/net/ipv4/ip_forward ip_forward 파일의 항목을 편집하고 1로 변경합니다.
 
 Flannel과 함께 사용하기 위한 kubeinit
 
