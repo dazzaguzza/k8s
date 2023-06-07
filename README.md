@@ -1,7 +1,10 @@
 #새로운 Ubuntu 22.04 노드에서 안정적인 Kubernetes 1.26 마스터를 구성하는 단계입니다.
 
+
 sudo apt-get update
+
 sudo apt install apt-transport-https curl
+
 containerd 설치(참조: https://docs.docker.com/engine/install/ubuntu/ )
 
 sudo mkdir -p /etc/apt/keyrings
