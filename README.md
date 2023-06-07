@@ -23,11 +23,9 @@ containerd 설치(참조: https://docs.docker.com/engine/install/ubuntu/ )
 
     sudo containerd config default | sudo tee /etc/containerd/config.toml
 
-#etc/containerd/config.toml 편집
+#etc/containerd/config.toml 편집 => SystemdCgroup = true로 설정
 
     sudo vi /etc/containerd/config.toml 
-
-#SystemdCgroup = true로 설정
 
     sudo systemctl restart containerd
 
