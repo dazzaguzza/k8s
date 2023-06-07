@@ -81,8 +81,6 @@ kubeinit에서 "/proc/sys/net/bridge/bridge-nf-call-iptables does not exist" 오
 
     sysctl -w net.ipv4.ip_forward=1
     
-sudo nano /proc/sys/net/ipv4/ip_forward ip_forward 파일의 항목을 편집하고 1로 변경합니다.
-
 Flannel과 함께 사용하기 위한 kubeinit
 
 18.
