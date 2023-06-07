@@ -45,7 +45,9 @@ containerd 설치(참조: https://docs.docker.com/engine/install/ubuntu/ )
 
     sudo nano /etc/fstab
 
-kubeinit에서 "/proc/sys/net/bridge/bridge-nf-call-iptables does not exist" 오류를 방지합니다( https://github.com/kubernetes/kubeadm/issues/1062 참조 ). 6단계에서 docker도 설치한 경우에는 필요하지 않습니다.
+kubeinit에서 "/proc/sys/net/bridge/bridge-nf-call-iptables does not exist" 오류를 방지합니다( https://github.com/kubernetes/kubeadm/issues/1062 참조 ). 
+
+6단계에서 docker도 설치한 경우에는 필요하지 않습니다.
 
     sudo modprobe br_netfilter
 
