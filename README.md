@@ -95,21 +95,17 @@ kubadm 명령이 말하는 대로 구성에 복사
 
     mkdir -p $HOME/.kube
 
-20.
-
     sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-
-21.
 
     sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 Flannel 적용( https://github.com/flannel-io/flannel 참조 )
 
-22.
+21.
 
     kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/v0.20.2/Documentation/kube-flannel.yml
     
-23.
+22.
 
     kubectl get pods --all-namespaces
     
