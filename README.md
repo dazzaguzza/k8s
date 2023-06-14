@@ -57,7 +57,8 @@ containerd 설치(참조: https://docs.docker.com/engine/install/ubuntu/ )
     
 14.
 
-    sudo apt install kubeadm kubelet kubectl kubernetes-cni
+    sudo apt install kubeadm kubelet kubectl
+   
     sudo apt-mark hold kubelet kubeadm kubectl
 
 #스왑 비활성화
